@@ -19,7 +19,7 @@ const Nav = () => (
             </Link>
             <div className="md:ml-auto md:mr-auto flex flex-wrap items-start text-base justify-center">
               <ActiveLink href="/" className="mr-5">Home</ActiveLink>
-              <ActiveLink href="/about" className="mr-5">About</ActiveLink>
+              <ActiveLink href="/about" >About</ActiveLink>
             </div>
             </div>
             

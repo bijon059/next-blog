@@ -1,16 +1,16 @@
-import { useRouter,usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import React, { Children } from 'react'
+import React from 'react'
 
 const ActiveLink = ({ children, ...props }) => {
-  const { asPath } = useRouter();
   const pathname = usePathname()
-  const className =
-  pathname === props.href || pathname === props.as
-      ? 'active'
-      : '';
+  const propsClass = props.className!=undefined?props.className:'';
+  const className = 
+      pathname === props.href || pathname === props.as
+      ? propsClass+' '+'active'
+      : propsClass;
   return (
-    <Link {...props} className={props.className+' '+className} >
+    <Link {...props} className={className} >
       {children}
     </Link>
   )
