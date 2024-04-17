@@ -1,5 +1,6 @@
 import ActiveLink from './ActiveLink'
 import Link from 'next/link'
+import Button from './Button'
 const Nav = () => (
   <nav className="bg-gradient-to-r from-indigo-400 to-cyan-400">
     <style jsx>{`
@@ -22,8 +23,8 @@ const Nav = () => (
               <ActiveLink href="/about" >About</ActiveLink>
             </div>
             </div>
-            
-            <button className="inline-flex items-center bg-yellow-500 border-0 rounded-md py-1 px-3 mt-4 md:mt-0">Click Me</button>
+            <Button className='inline-flex items-center bg-yellow-500 border-0 rounded-md py-1 px-3 mt-4 md:mt-0' onClick={() => {alert("test");}}>Click Me</Button>
+            {/* <button className="inline-flex items-center bg-yellow-500 border-0 rounded-md py-1 px-3 mt-4 md:mt-0"></button> */}
           </div>
   </nav>
 )

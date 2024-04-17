@@ -1,9 +1,6 @@
 'use client'
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Image from 'next/image'
-import Link from 'next/link';
-import { usePathname } from "next/navigation";
 import Nav from "./components/Nav";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
   return (
     <html lang="en">
       <body className={inter.className}>
